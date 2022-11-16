@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pilot;
 use Illuminate\Http\Request;
 
-class PilotController extends Controller
+class PilotsController extends Controller
 {
     /**
      * Display a listing of the resource.
