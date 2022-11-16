@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->date('fecha_creacion')->date_format('DD/MM/YY');
+            //$table->date('fecha_creacion')->date_format('DD/MM/YY');
             $table->string('num_pilotos');
             $table->boolean('sobre_presupuesto');
             $table->timestamps();
