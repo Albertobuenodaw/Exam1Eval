@@ -35,7 +35,16 @@ class PilotsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        
+        $pilot = new Pilot();
+        $pilot->nombre = $request->nombre;
+        $pilot->numero_licencia = $request->numero_licencia;
+        $pilot->victorias = $request->victorias;
+        $pilot->save();
+   
+       return view('pilot.index');
+      
     }
 
     /**

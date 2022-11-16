@@ -3,6 +3,7 @@
 <div class = "container">   
     <h1>Teams</h1>
     <form action = '/team/create' method= 'post'>
+        @csrf
         <label for="nombre">Name</label><br>
         <input type ="text" name="nombre" ><br>
 
@@ -15,7 +16,7 @@
         <label for="sobrepresupuesto">Sobrepresupuesto</label><br>
         <input type ="checkbox" name="sobrepresupuesto" ><br>
 
-        <input type="button" value= "Crear equipo">
+        <input type="submit" value= "Crear equipo">
 
     </form>
 </div>

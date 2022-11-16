@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PilotsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ Route::get('/', function () {
 Route::get('/pilot',function (){
     return view('pilot.index');
 });
+   
+Route::post('/pilot', [PilotsController::class , 'store']);
 
 Route::get('/team',function (){
     return view('team.index');
