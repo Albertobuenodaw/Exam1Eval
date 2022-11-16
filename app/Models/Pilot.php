@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Pilot extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'nombre',
+        'fecha_nacimiento',
+        'numero_licencia',
+        'victorias',
+        'escuderia_id'
+    ];
 }

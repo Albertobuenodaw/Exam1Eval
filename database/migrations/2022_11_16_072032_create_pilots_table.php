@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('pilots', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->date('fecha_nacimiento')->date_format('DD/MM/YY');
+            $table->string('numero_licencia');
+            $table->string('victorias');
+            $table->string('escuderia_id');
             $table->timestamps();
         });
     }
