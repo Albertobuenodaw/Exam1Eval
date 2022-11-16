@@ -13,6 +13,6 @@ class Team extends Model
         //'fecha_creacion',
         'num_pilotos',
         'sobre_presupuesto',
-        'team_id'
+        
     ];
 }

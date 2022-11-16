@@ -19,6 +19,7 @@ return new class extends Migration
             //$table->date('fecha_nacimiento')->date_format('DD/MM/YY');
             $table->string('numero_licencia');
             $table->string('victorias');
+            $table->string('escuderia_id')->nullable();
             $table->timestamps();
         });
     }
