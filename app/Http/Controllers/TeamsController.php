@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Pilot;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
-class PilotsController extends Controller
-{
+class TeamsController extends Controller{
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +12,7 @@ class PilotsController extends Controller
      */
     public function index()
     {
-        return view('pilot.index');
+        return view('team.index');
     }
 
     /**
@@ -34,16 +32,18 @@ class PilotsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        
-        
-        $pilot = new Pilot();
-        $pilot->nombre = $request->nombre;
-        $pilot->numero_licencia = $request->numero_licencia;
-        $pilot->victorias = $request->victorias;
-        $pilot->save();
+    {    
+        $team = new Team();
+        $team->nombre = $request->nombre;
+        $team->num_pilotos = $request->num_pilotos;
+        if($request->sobre_presupuesto=='ON'){
+            $team->sobre_presupuesto = true;
+        }else{
+            $team->sobre_presupuesto = false;
+        }
+        $team->save();
    
-       return view('pilot.index');
+       return view('team.index');
       
     }
 

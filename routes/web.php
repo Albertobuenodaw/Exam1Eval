@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PilotsController;
+use App\Http\Controllers\TeamsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +19,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/pilot',function (){
-    return view('pilot.index');
-});
-   
-Route::post('/pilot', [PilotsController::class , 'store']);
-
-Route::get('/team',function (){
-    return view('team.index');
-});
+Route::get('/pilot', [PilotsController::class , 'index'])->name('pilot-index');
+Route::post('/pilot', [PilotsController::class , 'store'])->name('pilot-create');
+Route::post('/team',[TeamsController::class, 'store'])->name('team-create');
+Route::get('/team', [TeamsController::class, 'index'])->name('team-index');
