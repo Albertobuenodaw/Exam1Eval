@@ -10,7 +10,7 @@ class Pilot extends Model
     use HasFactory;
     protected $fillable = [
         'nombre',
-        //'fecha_nacimiento',
+       // 'fecha_nacimiento',
         'numero_licencia',
         'victorias',
         'escuderia_id'

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use DB;
 
 class PilotSeeder extends Seeder
 {
@@ -16,11 +17,39 @@ class PilotSeeder extends Seeder
     {
         //
         DB::table('pilots')->insert([
-            'nombre' => Str::random(10),
-            //'fecha_nacimiento' => Str::(),
-            'numero_licencia' => Str::random_int(6),
-            'victorias' => Str::random_int(1),
-            'escuderia_id' => Str::random_int(4)
+            'nombre' => 'Alberto',
+           // 'fecha_nacimiento' => '04/04/87',
+            'numero_licencia' => '333333',
+            'victorias' => '3',
+            'escuderia_id' => ''
+        ]);
+        DB::table('pilots')->insert([
+            'nombre' => 'Unai',
+           // 'fecha_nacimiento' => '04/04/87',
+            'numero_licencia' => '666',
+            'victorias' => '23',
+            'escuderia_id' => ''
+        ]);
+        DB::table('pilots')->insert([
+            'nombre' => 'Gorka',
+           // 'fecha_nacimiento' => '04/04/87',
+            'numero_licencia' => '777777',
+            'victorias' => '1',
+            'escuderia_id' => ''
+        ]);
+        DB::table('pilots')->insert([
+            'nombre' => 'Leire',
+           // 'fecha_nacimiento' => '04/04/87',
+            'numero_licencia' => '222222',
+            'victorias' => '25',
+            'escuderia_id' => ''
+        ]);
+        DB::table('pilots')->insert([
+            'nombre' => 'Josu',
+           // 'fecha_nacimiento' => '04/04/87',
+            'numero_licencia' => '888888',
+            'victorias' => '15',
+            'escuderia_id' => ''
         ]);
     }
 }
